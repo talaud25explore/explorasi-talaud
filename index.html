@@ -1,13 +1,165 @@
-
 <!DOCTYPE html>
 <html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Explorasi Talaud</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            background: linear-gradient(to bottom, #e0f7fa, #ffffff);
+            color: #003B46;
+        }
+        header {
+            background: url('https://tse3.mm.bing.net/th?id=OIP.q-7FEZhOM6LjtBiW8rWBQgHaEK&pid=Api') center/cover no-repeat;
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+            text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
+        }
+        nav {
+            background-color: #007B8A;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+            padding: 1rem;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        section {
+            max-width: 960px;
+            margin: auto;
+            padding: 2rem;
+        }
+        h2 {
+            color: #007B8A;
+            border-bottom: 2px solid #00bcd4;
+            padding-bottom: 0.5rem;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        .gallery img {
+            width: 100%;
+            border-radius: 8px;
+            transition: transform 0.3s;
+        }
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+        iframe {
+            width: 100%;
+            border-radius: 10px;
+            margin-top: 1rem;
+        }
+        .form-contact {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+        .form-contact input, .form-contact textarea {
+            padding: 0.5rem;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            font-size: 1rem;
+        }
+        .form-contact button {
+            background-color: #007B8A;
+            color: white;
+            padding: 0.6rem;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .share-buttons {
+            margin-top: 1rem;
+        }
+        .share-buttons a {
+            margin-right: 10px;
+            text-decoration: none;
+            color: white;
+            padding: 0.5rem 1rem;
+            background-color: #25D366;
+            border-radius: 6px;
+            display: inline-block;
+        }
+        footer {
+            background: #007B8A;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 2rem;
+        }
+    </style>
 </head>
 <body>
-    <h1>Explorasi Talaud</h1>
-    <p>Selamat datang di website promosi Kepulauan Talaud.</p>
+    <header>
+        <h1>Explorasi Talaud</h1>
+        <p>Menjelajah Keindahan dan Potensi Kepulauan di Ujung Utara Indonesia</p>
+    </header>
+    <nav>
+        <a href="#beranda">Beranda</a>
+        <a href="#wisata">Wisata</a>
+        <a href="#budaya">Budaya</a>
+        <a href="#produk">Produk Lokal</a>
+        <a href="#kontak">Kontak</a>
+    </nav>
+    <section id="beranda">
+        <h2>Selamat Datang</h2>
+        <p>Website ini bertujuan untuk mempromosikan wisata, budaya, dan potensi UMKM Kepulauan Talaud. Mari bersama-sama angkat potensi lokal ke mata dunia!</p>
+    </section>
+    <section id="wisata">
+        <h2>Wisata Unggulan</h2>
+        <p>Talaud memiliki banyak destinasi eksotis: Pantai Lobbo, Pulau Sara, Air Terjun Ampadoap, dan spot diving kelas dunia.</p>
+        <div class="gallery">
+            <img src="https://tse3.mm.bing.net/th?id=OIP.q-7FEZhOM6LjtBiW8rWBQgHaEK&pid=Api" alt="Pulau Sara">
+            <img src="https://tse1.mm.bing.net/th?id=OIP.wdgbCag3xKQFR6Nx_7EkvQHaEO&pid=Api" alt="Pantai Laut Talaud">
+            <img src="https://tse4.mm.bing.net/th?id=OIP.pzP71-iOEDUO7VuElkep_gHaEr&pid=Api" alt="Pesisir Talaud">
+        </div>
+        <h3>Video Wisata</h3>
+        <iframe height="315" src="https://www.youtube.com/embed/v1IesdDZjTk" frameborder="0" allowfullscreen></iframe>
+    </section>
+    <section id="budaya">
+        <h2>Budaya dan Tradisi</h2>
+        <p>Dari Tarian Dero, tradisi Mane’e, hingga rumah adat, budaya Talaud memperkaya identitas lokal yang unik dan berharga.</p>
+    </section>
+    <section id="produk">
+        <h2>Produk Lokal & UMKM</h2>
+        <p>Komoditas unggulan: kopra, pala, abon ikan, anyaman pandan, dan kerajinan tangan dari laut. UMKM lokal siap berkembang bersama teknologi.</p>
+    </section>
+    <section id="kontak">
+        <h2>Kontak & Lokasi</h2>
+        <p>Email: explorasitalaud@gmail.com<br>
+        Instagram: @explorasi_talaud<br>
+        TikTok: @visit.talaud</p>
+
+        <h3>Google Maps</h3>
+        <iframe height="300" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d127934.07224955859!2d126.5361264!3d4.4216959!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x328c5bdb1ab201bb%3A0x3c8121705f4568f0!2sKepulauan%20Talaud%2C%20Sulawesi%20Utara!5e0!3m2!1sen!2sid!4v1714480000000!5m2!1sen!2sid" frameborder="0" allowfullscreen=""></iframe>
+
+        <h3>Hubungi Kami</h3>
+        <form class="form-contact" action="https://formspree.io/f/mayzwyqd" method="POST">
+            <input type="text" name="nama" placeholder="Nama Anda" required>
+            <input type="email" name="email" placeholder="Email Anda" required>
+            <textarea name="pesan" placeholder="Pesan Anda" rows="4" required></textarea>
+            <button type="submit">Kirim Pesan</button>
+        </form>
+
+        <div class="share-buttons">
+            <a href="https://wa.me/?text=https://talaud25explore.github.io/explorasi-talaud" target="_blank">Bagikan via WhatsApp</a>
+            <a href="https://www.instagram.com/?url=https://talaud25explore.github.io/explorasi-talaud" target="_blank" style="background:#E1306C">Bagikan via Instagram</a>
+        </div>
+    </section>
+    <footer>
+        &copy; 2025 Explorasi Talaud | Website promosi pariwisata dan budaya Kepulauan Talaud.
+    </footer>
 </body>
 </html>
