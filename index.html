@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Talaud Digital Market - Beta</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background: linear-gradient(to right, #d1f2eb, #a9dfbf);
+      color: #2c3e50;
+      padding: 1rem;
+    }
+    h1, h2 {
+      text-align: center;
+    }
+    .container {
+      max-width: 800px;
+      margin: auto;
+    }
+    .form-group, .forum-group {
+      margin: 1rem 0;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 0.5rem;
+      margin-top: 0.5rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    button {
+      padding: 0.6rem 1rem;
+      background-color: #27ae60;
+      border: none;
+      color: white;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    button:hover {
+      background-color: #1e8449;
+    }
+    .forum {
+      border: 1px solid #ccc;
+      padding: 1rem;
+      border-radius: 5px;
+      background-color: #f9f9f9;
+      margin-top: 1rem;
+    }
+    .comment {
+      padding: 0.5rem;
+      border-bottom: 1px solid #ddd;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Talaud Digital Market</h1>
+    <p style="text-align:center;">Versi Beta – Forum & Info Harga</p>
+
+    <!-- Form Pendaftaran -->
+    <h2>Pendaftaran</h2>
+    <form id="signupForm">
+      <div class="form-group">
+        <label>Nama Lengkap</label>
+        <input type="text" id="name" required />
+      </div>
+      <div class="form-group">
+        <label>Email</label>
+        <input type="email" id="email" required />
+      </div>
+      <div class="form-group">
+        <label>Kata Sandi</label>
+        <input type="password" id="password" required />
+      </div>
+      <div class="form-group">
+        <label>Peran</label>
+        <select id="role">
+          <option value="petani">Petani</option>
+          <option value="nelayan">Nelayan</option>
+          <option value="umkm">UMKM</option>
+        </select>
+      </div>
+      <button type="submit">Daftar</button>
+    </form>
+
+    <!-- Forum Interaksi -->
+    <h2>Forum Diskusi</h2>
+    <div class="forum-group">
+      <textarea id="forumInput" rows="3" placeholder="Tulis komentar Anda..."></textarea>
+      <button onclick="postComment()">Kirim</button>
+    </div>
+    <div class="forum" id="forumSection">
+      <!-- Komentar akan muncul di sini -->
+    </div>
+
+    <!-- Prediksi Harga Market -->
+    <h2>Prediksi Harga Pasar</h2>
+    <p>Data AI Sederhana (dummy):</p>
+    <ul>
+      <li>Beras: Rp 12.000/kg → Prediksi: Rp 12.500/kg</li>
+      <li>Ikan Tuna: Rp 30.000/kg → Prediksi: Rp 28.500/kg</li>
+      <li>Kopi Bubuk Lokal: Rp 60.000/kg → Prediksi: Rp 61.000/kg</li>
+    </ul>
+  </div>
+
+  <script>
+    // Simulasi penyimpanan komentar lokal
+    function postComment() {
+      const text = document.getElementById("forumInput").value;
+      if (text.trim() === "") return;
+
+      const forum = document.getElementById("forumSection");
+      const div = document.createElement("div");
+      div.className = "comment";
+      div.textContent = text;
+      forum.prepend(div);
+
+      document.getElementById("forumInput").value = "";
+    }
+
+    // Simulasi form pendaftaran (belum konek Firebase)
+    document.getElementById("signupForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+      const name = document.getElementById("name").value;
+      const email = document.getElementById("email").value;
+      const role = document.getElementById("role").value;
+
+      alert(`Terima kasih ${name}! Anda terdaftar sebagai ${role}.`);
+    });
+  </script>
+</body>
+</html>
